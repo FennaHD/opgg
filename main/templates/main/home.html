@@ -1,0 +1,14 @@
+<head>
+    {% load static %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+</head>
+
+<body>
+    <p>Maybe instead of a button use a form (?)</p>
+    <form method="GET" action="summoner/">
+        <input type="text" name="summoner_name" placeholder="Summoner Name">
+        <input type="submit" value="Submit this mofo">
+    </form>
+</body>

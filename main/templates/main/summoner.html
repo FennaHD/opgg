@@ -1,0 +1,145 @@
+<head>
+    {% load static %}
+    <link href="{% static 'css/summoner.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>console.log("Hello World")</script>
+</head>
+
+<body>
+    <div class="container-fluid"> 
+        <div class="HeaderRow row">
+            <div class="HeaderLogo col">
+                <div id="headerLogoCont">
+                    <img src=" {% static 'images/opgg.svg'%}" height="16px">
+                </div>
+            </div>
+            <div id="headerFiller" class="col"></div>
+        </div>
+    </div>
+    <nav id="navbar" class="navbar navbar-expand-md koko">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="navbar-brand text-white" href="../../">Home</a>
+                </li>
+            </ul>
+            <form method="GET" action="" class="form-inline my-2 my-lg-0">
+                <input name="summoner_name" type="text" class="form-control mr-sm-2 align-items-end" placeholder="Summoner Name">
+                <button type="submit" class="btn btn-success my-2 my-sm-0">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+
+    <div class="Wrapper">
+        <div class="Header">
+            <img class="Face" src="http://ddragon.leagueoflegends.com/cdn/9.21.1/img/profileicon/{{icon}}.png">
+            <div class=Profile>
+                <div class="Information">
+                    <span class="Name">{{name}}</span><br>
+                    <span class="Rank">Ladder Rank 566,155 (33.66% from top)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="Menu">
+            <div class="tabContainer">
+                <dl class="dlContainer">
+                    <dd class="activeElement">Summary</dd>
+                    <dd>Champions</dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="tabWrapper">
+            <div class="SummonerLayoutContent">
+                <div class="SideContent">
+                    <div class="TierBox">
+                        <div class="SummonerRatingMedium">
+                            <div class="Medal">
+                                <img src="http://opgg-static.akamaized.net/images/medals/gold_4.png" class="MedalImage">
+                            </div>
+                            <div class="TierRankInfo">
+                                <div class="RankType">
+                                    Rank Solo
+                                </div>
+                                <div class="TierRank">
+                                    {{rank}}
+                                </div>
+                                <div class="TierInfo">
+                                    <span class="LeaguePoints">{{league_points}} LP</span> / {{wins}}W {{losses}}L
+                                    <br>
+                                    Win Ratio {{win_ratio}}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SubTier">
+
+                    </div>
+                    <div class="StatsBox">
+                        <div class="StatsHeaderContainer">
+                            <div class="dlContainer">
+                                <div class="StatsHeaderElement activeElement" onclick="showStatsContent(0)"><span class="StatsHeaderText">S9 Total</span></div>
+                                <div class="StatsHeaderElement" onclick="showStatsContent(1)"><span class="StatsHeaderText">Rank Solo</span></div>
+                                <div class="StatsHeaderElement" onclick="showStatsContent(2)"><span class="StatsHeaderText">Ranked Flex 5v5</span></div>
+                                <div class="StatsHeaderElement" onclick="showStatsContent(3)"><span class="StatsHeaderText">Ranked Flex 3v3</span></div>
+                            </div>
+                        </div>
+                        <div class="StatsContent">
+                            {% for champion_id in fav_champs_ids %}
+                                <div class="Box ChampionBox">
+                                    <div class="ChampionImageContainer">
+                                        <img class="rounded-circle ChampionImage" src="http://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{{champion_id}}.png">
+                                    </div>
+                                    <div class="ChampionInfo">
+                                        <div class="ChampionName">
+                                            Tryndamere
+                                        </div>
+                                        <div class="ChampionCS">
+                                            CS 200.7 (7.1)
+                                        </div>
+                                    </div>
+                                    <div class="PersonalKDA">
+                                        <div class="KDA">
+                                            KDA
+                                        </div>
+                                        <div class="KDAEach">
+                                            2.0 / 2.0 / 2.0
+                                        </div>
+                                    </div>
+                                    <div class="Played">
+                                        <div class="WinRatio">
+                                            58%
+                                        </div>
+                                        <div class="GamesPlayed">
+                                            179 Played
+                                        </div>
+
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="StatsContent">
+                            <p>This is the second tab</p>
+                        </div>
+                        <div class="StatsContent">
+                            <p>This is the third tab</p>
+                        </div>
+                        <div class="StatsContent">
+                            <p>This is the fourth tab</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="RealContent">
+
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/summoner.js' %}"></script>
+</body>

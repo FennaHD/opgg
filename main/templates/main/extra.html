@@ -1,0 +1,21 @@
+<div class="row mt-4 wf">
+        <div class="col ChampionCol mr-2 wf">
+            {% for champion_id in fav_champs_ids %}
+                <div class="row p-1 wf">
+                        <img class="rounded-circle ChampionImage" src="http://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{{champion_id}}.png">
+                        Champion_Name_Placeholder
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+    <ul>
+        <li>Name: {{ name }}</li>
+        <li>Level: {{ level }}</li>
+        <li>ID: {{ id }}</li>
+        <li>Account ID: {{ account_id }} </li>
+        {% for match in matches %}
+            <li> {{match.lane}} </li>
+        {% endfor %}
+    </ul>

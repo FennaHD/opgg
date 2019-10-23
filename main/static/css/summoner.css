@@ -1,0 +1,329 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+#navbar {
+    background-color: #5383e8;
+}
+
+.navbar {
+    border-bottom: 1px solid #4171d6;
+    height: 48px;
+}
+
+.container-fluid .HeaderRow {
+    height: 40px;
+}
+
+.container-fluid .row .HeaderLogo {
+    background-color: #5383e8;
+    max-width: 98px;
+}
+
+#headerLogoCont {
+    margin-top: 10px;
+}
+
+#headerFiller {
+    background-color: #091a3d;;
+}
+
+.Wrapper {
+    background-color: #ededed;
+    width:100%;
+}
+
+
+.Wrapper .Header {
+    padding-top: 24px;
+    padding-left: 30px;
+    height: 124px;
+    margin: 0 220.5px 0 220.5px;
+}
+
+.Wrapper .Header .Face {
+    height: 100%;
+}
+
+.Wrapper .Header .Profile {
+    height: 100%;
+    display: inline-block;
+    margin: 0 25px 0 25px;
+    vertical-align: middle;
+
+}
+
+.Wrapper .Header .Profile .Information .Name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Wrapper .Header .Information .Rank {
+    font-size: 11px;
+    color: #777;
+    height: 40px;
+}
+
+.Wrapper .Menu {
+    margin-top: 25px;
+    height: 41px;
+    border-bottom: 1px solid #c6cbcb;
+}
+
+.Wrapper .Menu .tabContainer {
+    width: 100%;
+    height: 40px;
+    margin: 0 220.5px 0 220.5px;
+}
+
+.dlContainer {
+    display: table;
+    border-left: 1px solid #c6cbcb;
+    height: 100%;
+}
+
+.dlContainer dd {
+    width: 84px;
+    height: 41px;
+    float: left;
+    border-top: 1px solid #c6cbcb;
+    border-right: 1px solid #c6cbcb;
+    border-bottom: 1px solid #c6cbcb;
+    margin: 0 0 0 0;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: #f2f2f2;
+}
+
+.dlContainer div {
+    width: 84px;
+    height: 41px;
+    float: left;
+    border-top: 1px solid #c6cbcb;
+    border-right: 1px solid #c6cbcb;
+    border-bottom: 1px solid #c6cbcb;
+    margin: 0 0 0 0;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: #f2f2f2;;
+}
+
+
+.activeElement {
+    border-bottom: none !important;
+    background-color: #f2f2f2;
+}
+
+
+.Wrapper .Menu .tabContainer .buttonContainer button:hover {
+    background-color: gray;
+}
+
+.wf {
+    outline: 1px solid black;
+}
+
+#Name {
+    font-size: 30px;
+
+}
+
+.ChampionCol {
+    width: 298px !important;
+    max-width: 298px;
+}
+
+.tabWrapper {
+    margin: 0 220.5px 0 220.5px;
+}
+
+.tabWrapper .SummonerLayoutContent .SideContent {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+}
+
+.tabWrapper .SummonerLayoutContent .SideContent .TierBox {
+    background-color: #f2f2f2;
+    margin-top:10px;
+    border: 1px solid #c6cbcb;
+}
+
+.tabWrapper .SummonerLayoutContent .SideContent .TierBox .SummonerRatingMedium {
+    display: table;
+    padding: 8px 0 8px 0;
+    width: 100%;
+}
+
+.tabWrapper .SummonerLayoutContent .SideContent .TierBox .SummonerRatingMedium .Medal {
+    position: relative;
+    display: table-cell;
+    width:120px;
+    height: 124px;
+    line-height: 1.5;
+}
+
+.TierRankInfo {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.RankType {
+    font-size: 11px;
+    color: #879292;
+}
+
+.TierRank {
+    font-size: 15px;
+    color: #1f8ecd;
+    font-weight: bold;
+}
+
+.TierInfo {
+    font-size: 12px;
+    color: #879292;
+}
+
+.LeaguePoints {
+    color: #555e5e;
+    font-weight: bold;
+}
+
+.MedalImage {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    width: 104px;
+}
+
+
+.StatsBox {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ededed;
+}
+
+.StatsHeaderContainer {
+    width:100%;
+    border-bottom: 1px solid #f2f2f2;
+    height: 40px;
+}
+
+.StatsHeaderElement {
+    display: table-cell;
+    max-width: 25%;
+    font-size:12px;
+    line-height: 15px;
+    padding: 0 !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.StatsHeaderText {
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.Box {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.ChampionBox {
+    display: table;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #c6cbcb;
+    height: 54px;
+}
+
+.ChampionImageContainer {
+    display: table-cell;
+    width: 60px;
+    height: 100%;
+    overflow:auto;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.ChampionImage {
+    height: 45px;
+}
+
+.ChampionInfo {
+    display: table-cell;
+    width: 95px;
+    max-width: 95px;
+    height: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.ChampionInfo .ChampionName {
+    font-size: 13px;
+    color: #555e5e;
+    font-weight: bold;
+    width: 70px;
+    max-width: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ChampionInfo .ChampionCS {
+    font-size: 12px;
+    color: #879292;
+    white-space: nowrap;
+}
+
+.PersonalKDA {
+    display: table-cell;
+    width: 73px;
+    height: 100%;
+    text-align:center;
+    vertical-align: middle;
+}
+
+.PersonalKDA .KDA {
+    color: #879292;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.PersonalKDA .KDAEach {
+    color: #879292;
+    font-size: 11px;
+}
+
+.Played {
+    display: table-cell;
+    width: 70px;
+    height: 100%;
+    text-align:center;
+    vertical-align: middle;
+}
+
+.Played .WinRatio {
+    color: #879292;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Played .GamesPlayed {
+    color: #879292;
+    font-size: 10px;
+}
